@@ -24,14 +24,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnCalculate = findViewById(R.id.btn_calculate)
         tvResult = findViewById(R.id.tv_result)
         btnCalculate.setOnClickListener(this)
-
-        /*if (savedInstanceState != null){
-            val result  = savedInstanceState.getString(STATE_RESULT)
-            tvResult.text = result
-        }*/
     }
 
     override fun onClick(view: View?) {
+
         if (view?.id == R.id.btn_calculate){
             val inputLength = edtLength.text.toString().trim()
             val inputWidth = edtWidth.text.toString().trim()
@@ -56,9 +52,4 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
-
-    /*override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putString(STATE_RESULT, tvResult.text.toString())
-    }*/
 }
